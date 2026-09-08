@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hello Test</title>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="root">Loading… (if this text never changes, the scripts above never ran)</div>
+
+<script type="text/babel" data-presets="react">
+function App() {
+  return (
+    <div style={{ padding: 24, fontFamily: "sans-serif", textAlign: "center" }}>
+      <h1>✅ It works!</h1>
+      <p>If you can see this, React + Babel loaded fine from the CDN.</p>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>
