@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>CDN Check</title>
+</head>
+<body>
+<div id="out" style="font-family: sans-serif; padding: 24px; font-size: 16px; line-height: 1.8;">Checking scripts…</div>
+<script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js" onerror="document.getElementById('out').innerHTML += '<br>❌ React FAILED to load'" onload="document.getElementById('out').innerHTML += '<br>✅ React loaded, version ' + React.version"></script>
+<script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js" onerror="document.getElementById('out').innerHTML += '<br>❌ ReactDOM FAILED to load'" onload="document.getElementById('out').innerHTML += '<br>✅ ReactDOM loaded'"></script>
+<script src="https://unpkg.com/@babel/standalone@7.24.7/babel.min.js" onerror="document.getElementById('out').innerHTML += '<br>❌ Babel FAILED to load'" onload="document.getElementById('out').innerHTML += '<br>✅ Babel loaded, version ' + (window.Babel ? Babel.version : '?')"></script>
+<script>
+  setTimeout(function() {
+    document.getElementById('out').innerHTML += '<br><br>If any ❌ above, that script is being blocked. If all ✅, the CDN itself is fine.';
+  }, 2000);
+</script>
+</body>
+</html>
